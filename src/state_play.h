@@ -1,7 +1,7 @@
 #ifndef STATE_PLAY_H
 #define STATE_PLAY_H
 
-#include "../../src/ufo/state.h"
+#include <ufo/state.h>
 
 class Island;
 

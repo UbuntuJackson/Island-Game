@@ -1,10 +1,10 @@
 #ifndef ISLAND_H
 #define ISLAND_H
-#include "../../src/ufo/state.h"
-#include "../../src/ufo/game.h"
-#include "../../src/ufo/cellmap.h"
-#include "../../src/ufo/camera.h"
-#include "../../src/ufo/ufo_load.h"
+#include <ufo/state.h>
+#include <ufo/game.h>
+#include <ufo/cellmap.h>
+#include <ufo/camera.h>
+#include <ufo/ufo_load.h>
 #include "state_load.h"
 #include "state_play.h"
 

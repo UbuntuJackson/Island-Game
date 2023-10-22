@@ -1,7 +1,7 @@
 #include "state_load.h"
 #include "island.h"
-#include "../../src/ufo/state.h"
-#include "../../src/ufo/cellmap.h"
+#include <ufo/state.h>
+#include <ufo/cellmap.h>
 
 StateLoad::StateLoad(Island* _game,CellMap* _map, TypeRegistry *_registry): UfoLoad(_game,_map, _registry), game{_game}{}
 void

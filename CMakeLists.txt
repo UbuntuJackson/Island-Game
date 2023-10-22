@@ -7,5 +7,7 @@ file(
     GLOB SRC
     src/*.cpp
 )
-target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC UFOCells)
-add_executable(${CMAKE_PROJECT_NAME}, ${SRC})
+
+add_executable(${PROJECT_NAME} ${SRC})
+
+target_link_libraries(${PROJECT_NAME} PUBLIC UFOCells)

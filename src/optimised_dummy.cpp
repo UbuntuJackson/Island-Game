@@ -1,8 +1,8 @@
 #include "optimised_dummy.h"
-#include "../../external/olcPixelGameEngine.h"
-#include "../../src/ufo/cell_actor.h"
+#include "../external/UFO-Cells/external/olcPixelGameEngine.h"
+#include <ufo/cell_actor.h>
 #include "island.h"
-#include "../../src/ufo/layer_actor.h"
+#include <ufo/layer_actor.h>
 
 OptimisedDummy::OptimisedDummy(olc::vf2d _position, Island* _game) : CellActor(_position, _game), game{static_cast<Island*>(_game)}{
     ray = PlayerRay(_game, &(game->camera), this, {6.0f, 12.0f});

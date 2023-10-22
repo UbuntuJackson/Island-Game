@@ -1,7 +1,7 @@
 #ifndef STATE_LOAD_H
 #define STATE_LOAD_H
 
-#include "../../src/ufo/ufo_load.h"
+#include <ufo/ufo_load.h>
 
 
 class Island;

@@ -1,8 +1,8 @@
 #ifndef OPTIMISED_DUMMY_H
 #define OPTIMISED_DUMMY_H
 
-#include "../../src/ufo/cell_actor.h"
-#include "../../src/ufo/player_ray.h"
+#include <ufo/cell_actor.h>
+#include <ufo/player_ray.h>
 class Island;
 
 class OptimisedDummy : public CellActor{

@@ -1,6 +1,6 @@
 
-#include "ufo_global.h"
-#include "../../games/island/island.h"
+#include <program/ufo_global.h>
+#include "island.h"
 //#include "../../external/olcPGEX_SplashScreen.h"
 //#define OLC_PGEX_SPLASHSCREEN
 

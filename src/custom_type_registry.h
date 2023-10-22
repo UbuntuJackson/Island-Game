@@ -5,8 +5,8 @@ class CellActor;
 class Layer;
 class Island;
 #include <string>
-#include "../../src/ufo/type_registry.h"
-#include "../../external/olcPixelGameEngine.h"
+#include <ufo/type_registry.h>
+#include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 class CustomTypeRegistry : public TypeRegistry{
 public:
     Island *game;

@@ -42,8 +42,6 @@ OptimisedDummy::Update(){
         velocity.y = -10.0f;
     }
 
-    former_position = position;
-
     if(on_dynamic_solid){
         for(auto act : act_layer->actors){
 
@@ -91,6 +89,8 @@ OptimisedDummy::Update(){
         }
     }
 
+    former_position = position;
+
     if(!on_dynamic_solid) AdjustEnteredDynamicSolidX(act_layer);
 
     position.x += velocity.x;
@@ -99,7 +99,7 @@ OptimisedDummy::Update(){
     if(on_dynamic_solid) AdjustEnterPseudoStaticSolidX(act_layer);
 
     //HEIGHT ADJUSTMENT OVERLAP
-    if(!on_dynamic_solid) AdjustUpSlope(&(game->map));
+    AdjustUpSlope(&(game->map));
     // COLLISION ADJUSTMENT X-AXIS
     AdjustCollisionX(&(game->map));
     //ThisVsDynamicSolid

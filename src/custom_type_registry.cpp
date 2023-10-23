@@ -12,6 +12,7 @@
 #include "optimised_dummy.h"
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
 #include <ufo/dynamic_solid.h>
+#include "squishable.h"
 
 CustomTypeRegistry::CustomTypeRegistry(Island* _game): game{_game}{}
 
@@ -22,5 +23,8 @@ CustomTypeRegistry::NewActor(std::string _actor, olc::vf2d _position){
     }
     if(_actor == "DynamicSolid"){
         return new DynamicSolid(_position, game, "dynamic_solid");
+    }
+    if(_actor == "Squishable"){
+        return new Squishable(_position, game);
     }
 }

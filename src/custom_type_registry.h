@@ -7,6 +7,7 @@ class Island;
 #include <string>
 #include <ufo/type_registry.h>
 #include "../external/UFO-Cells/external/olcPixelGameEngine.h"
+
 class CustomTypeRegistry : public TypeRegistry{
 public:
     Island *game;

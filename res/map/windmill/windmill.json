@@ -31,14 +31,22 @@
             "category" : "actor"
         },
         {
-            "name" : "dynamic_solids",
+            "name" : "squishable",
             "type" :"actor",
             "actors" : [
                 {
-                    "actor" : "DynamicSolid",
-                    "x" : 40,
-                    "y" : 300
+                    "actor" : "Squishable",
+                    "x" : 400,
+                    "y" : 370
                 }
+            ],
+            "category" : "actor"
+        },
+        {
+            "name" : "dynamic_solids",
+            "type" :"actor",
+            "actors" : [
+                
             ],
             "category" : "actor"
         },

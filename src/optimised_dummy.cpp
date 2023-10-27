@@ -44,15 +44,6 @@ OptimisedDummy::Update(){
         }
     }
 
-    for(auto squishable : squishable_layer->actors){
-        if(squishable->mask == "squishable"){
-            Squishable* sq = dynamic_cast<Squishable*>(squishable);
-            if(sq->IsBeingEntered(position, velocity, UfoGlobal::UP, mask)){
-                velocity.y = -10.0f;
-            }
-        }
-    }
-
     if(IsOverlapping(&(game->map),mask_decal,solid_layer,{position.x,position.y+1.0f}) ||
         IsOverlapping(&(game->map),mask_decal,solid_layer,{position.x,position.y+1.0f}, olc::RED)){
         is_grounded = true;        
@@ -112,6 +103,22 @@ OptimisedDummy::Update(){
         }
     }
 
+    for(auto squishable : squishable_layer->actors){
+        if(squishable->mask == "squishable"){
+            Squishable* sq = dynamic_cast<Squishable*>(squishable);
+            std::cout << position - former_position << std::endl;
+            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::LEFT, mask)){
+                velocity.x = -20.0f;
+            }
+            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::RIGHT, mask)){
+                velocity.x = 20.0f;
+            }
+            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::UP, mask)){
+                velocity.y = -20.0f;
+            }
+        }
+    }
+
     former_position = position;
 
     if(!on_dynamic_solid) AdjustEnteredDynamicSolidX(act_layer);
@@ -158,10 +165,7 @@ OptimisedDummy::Update(){
             on_dynamic_solid = true;
             is_grounded = true;
         }
-        std::cout << on_dynamic_solid << std::endl;
     }
-
-    std::cout << on_dynamic_solid << std::endl;
 
     //############# Collision features end here ###############
 

@@ -103,22 +103,6 @@ OptimisedDummy::Update(){
         }
     }
 
-    for(auto squishable : squishable_layer->actors){
-        if(squishable->mask == "squishable"){
-            Squishable* sq = dynamic_cast<Squishable*>(squishable);
-            std::cout << position - former_position << std::endl;
-            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::LEFT, mask)){
-                velocity.x = -20.0f;
-            }
-            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::RIGHT, mask)){
-                velocity.x = 20.0f;
-            }
-            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::UP, mask)){
-                velocity.y = -20.0f;
-            }
-        }
-    }
-
     former_position = position;
 
     if(!on_dynamic_solid) AdjustEnteredDynamicSolidX(act_layer);
@@ -168,6 +152,15 @@ OptimisedDummy::Update(){
     }
 
     //############# Collision features end here ###############
+
+    for(auto squishable : squishable_layer->actors){
+        if(squishable->mask == "squishable"){
+            Squishable* sq = dynamic_cast<Squishable*>(squishable);
+            if(sq->IsBeingEntered(former_position, position-former_position, UfoGlobal::UP, mask)){
+                velocity.y = -10.0f;
+            }
+        }
+    }
 
     ray.Update();
     bool collision = ray.IsHitBitmap(game->map.map_decals[solid_layer]);

@@ -10,7 +10,7 @@ Squishable::Squishable(olc::vf2d _position, Island* _game) : CellActor(_position
     solid_layer = "solid";
     is_already_in_semi_solid = false;
     snap_to_ground = 6;
-    snap_up_range = 4;
+    snap_up_range = 12;
 }
 
 void

@@ -10,7 +10,6 @@ class Island;
 class Squishable : public CellActor{
 public:
     Island* game;
-    bool on_dynamic_solid = false;
     Squishable(olc::vf2d _position, Island* _game);
     void Update();
     void Draw(Camera* _camera);

@@ -15,7 +15,7 @@ void
 Island::LoadResources(){
     asset_manager.LoadDecal("../res/masks/pill_small.png", "decPin");
     asset_manager.LoadDecal("../res/masks/purple.png", "decPurple");
-    asset_manager.LoadDecal("../res/misc/new_logo_centred_ufo_cells.png", "load");
+    asset_manager.LoadDecal("../external/UFO-Cells/res/misc/new_logo_centred_ufo_cells.png", "load");
     asset_manager.LoadDecal("../res/map/windmill/dynamic_solid_1.png", "dynamic_solid");
     asset_manager.LoadDecal("../res/masks/squishable.png", "squishable");
 }

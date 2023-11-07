@@ -46,6 +46,8 @@ OptimisedDummy::Update(){
 
     ApplyCollision(&(game->map));
 
+    std::cout << is_grounded << std::endl;
+
     //############# Collision features end here ###############
 
     for(auto squishable : squishable_layer->actors){

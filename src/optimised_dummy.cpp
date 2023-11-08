@@ -16,6 +16,7 @@ OptimisedDummy::OptimisedDummy(olc::vf2d _position, Island* _game) : CellActor(_
     solid_layer = "solid";
     game->camera.SetStatePlatformer(this, {0.0f, 0.0f}, game->map.map_size);
     is_already_in_semi_solid = false;
+    snap_to_ground = 6;
 }
 
 void
@@ -46,7 +47,7 @@ OptimisedDummy::Update(){
 
     ApplyCollision(&(game->map));
 
-    std::cout << is_grounded << std::endl;
+    //std::cout << (is_grounded == !was_grounded) << std::endl;
 
     //############# Collision features end here ###############
 

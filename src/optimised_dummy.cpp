@@ -9,19 +9,20 @@
 
 OptimisedDummy::OptimisedDummy(olc::vf2d _position, Island* _game) : CellActor(_position, _game), game{static_cast<Island*>(_game)}{
     ray = PlayerRay(_game, &(game->camera), this, {6.0f, 12.0f});
-    //game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, game->map.map_size);
+    game->camera.SetStateMouseAndArrowKeys({0.0f, 0.0f}, game->map.map_size);
     game->camera.scale = 4.0f;
     mask = "decPin";
     mask_decal = game->asset_manager.GetDecal(mask);
     solid_layer = "solid";
-    game->camera.SetStatePlatformer(this, {0.0f, 0.0f}, game->map.map_size);
+    //game->camera.SetStatePlatformer(this, {0.0f, 0.0f}, game->map.map_size);
     is_already_in_semi_solid = false;
     snap_to_ground = 6;
+    snap_up_range = 14;
 }
 
 void
 OptimisedDummy::Update(){
-    //game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f});
+    std::cout << game->camera.ScreenToWorld(game->GetMousePos(), {0.0f,0.0f}) << std::endl;
 
     LayerActor* squishable_layer;
 
@@ -45,7 +46,7 @@ OptimisedDummy::Update(){
     }
     velocity.y+=0.7f;
 
-    ApplyCollision(&(game->map));
+    ApplyCollisionNaive(&(game->map));
 
     //std::cout << (is_grounded == !was_grounded) << std::endl;
 

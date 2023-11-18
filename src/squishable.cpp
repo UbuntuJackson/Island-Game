@@ -90,7 +90,7 @@ Squishable::Update(){
     if(on_dynamic_solid) AdjustEnterPseudoStaticSolidX(act_layer);
 
     //HEIGHT ADJUSTMENT OVERLAP
-    AdjustUpSlope(&(game->map));
+    ApplyUpSlope(&(game->map));
     // COLLISION ADJUSTMENT X-AXIS
     AdjustCollisionX(&(game->map));
     //ThisVsDynamicSolid

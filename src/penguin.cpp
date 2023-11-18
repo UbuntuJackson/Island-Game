@@ -9,7 +9,7 @@ Penguin::Penguin(olc::vf2d _position, Island* _game) :
     game{static_cast<Island*>(_game)},
     anim_walk(_game),
     direction{1.0f} {
-    game->camera.scale = 3.0f;
+    game->camera.scale = 1.0f;
     mask = "penguin_hitbox";
     mask_decal = game->asset_manager.GetDecal(mask);
     solid_layer = "solid";

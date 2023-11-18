@@ -23,7 +23,57 @@
             "type" :"actor",
             "actors" : [
                 {
-                    "actor" : "Dummy",
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 700,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 650,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 590,
+                    "y" : 100
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 720,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 480,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 510,
+                    "y" : 120
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 10,
+                    "y" : 130
+                },
+                {
+                    "actor" : "Penguin",
+                    "x" : 500,
+                    "y" : 50
+                },
+                {
+                    "actor" : "Penguin",
                     "x" : 700,
                     "y" : 50
                 }

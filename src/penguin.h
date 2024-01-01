@@ -9,8 +9,8 @@ class Island;
 class Penguin : public CellActor{
 public:
     Island* game;
-    const float ACCELERATION_X = 0.4f;
-    const float FRICTION_X = 0.6f;
+    const float ACCELERATION_X = 0.42f;
+    const float FRICTION_X = 0.78f;
     const float FRICTION_Y = 0.8f;
     float direction;
     int blow_up;

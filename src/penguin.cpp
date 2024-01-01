@@ -23,7 +23,7 @@ Penguin::Penguin(olc::vf2d _position, Island* _game) :
 void
 Penguin::Update(){
     velocity.y *= FRICTION_Y;
-    velocity.y += 0.7f;
+    velocity.y += 1.1f;
     velocity.x *= FRICTION_X;
     if(is_grounded) velocity.x += ACCELERATION_X*direction;
     ApplyCollisionNaive(&(game->map));
